@@ -67,7 +67,7 @@ gb_popen(const char *command, FILE*& fout, FILE*& ferr)
 			close(fd[1]);
 			close(fd2[0]);
 			close(fd2[1]);
-			free(cur);
+			delete cur;
 			return EINVAL;
 		}
 		case 0:
